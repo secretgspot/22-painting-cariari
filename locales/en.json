@@ -1,0 +1,140 @@
+{
+  "languages": {
+    "en": "English",
+    "es": "Espanol"
+  },
+
+  "pages": {
+    "main": "Painting Cariari",
+    "terms": "Painting Cariari: Terms of Service & Privacy Policy"
+  },
+
+  "hero": {
+    "title": "Painting Cariari",
+    "hero": {
+      "title_1": "I paint.",
+      "title_2": "You relax."
+    }
+  },
+
+  "intro": {
+    "p_1": "Painting is no fun, at least for the most. In fact, it’s time-consuming, messy, and can involve a bruised knee or two. In my case I love to paint. It’s pretty much all I do. Get your time back — book me to make your investment like new.",
+    "p_2": "In the rare event, you're not satisfied with the quality of the service, I will make it right with my Quality of Standard Guarantee."
+  },
+
+  "calc": {
+    "title": "Online Estimator",
+    "gallons": "gallons",
+    "liters": "liters",
+    "colones": "₡",
+    "dollars": "$",
+    "sq_feet": "feet",
+    "sq_meters": "meters",
+    "surface_area": "Surface area",
+    "surface_type": {
+      "title": "Surface type",
+      "smooth": "smooth",
+      "textured": "textured",
+      "pourous": "pourous"
+    },
+    "paint_quality": {
+      "title": "Paint quality",
+      "luxury": "luxury",
+      "premium": "premium",
+      "economy": "economy"
+    },
+    "coats": "Coats"
+  },
+
+  "steps": {
+    "title": "My simple process guarantees quality each and every time.",
+    "estimate": {
+      "title": "Free estimate",
+      "p": "Provide on-site estimate for the job."
+    },
+    "preparation": {
+      "title": "Preparation",
+      "p": "Prepare and mask-out all of the areas to eliminate damage to the property."
+    },
+    "job": {
+      "title": "Do the job",
+      "p": "After everything is prepared, prime and paint the surfaces."
+    },
+    "cleanup": {
+      "title": "Cleanup",
+      "p": "Clean everything up  and present completed results to the client for approval and a sign-off."
+    }
+  },
+
+  "details": {
+    "p_1": "A well-painted exterior is your family’s greeting to the community. It is a reflection of your style and your interests. A newly-painted house is a beautiful thing which can instill a sense of ownership and pride. But it’s not just a psychological effect, it is a crucial layer of environmental protection for your valuable housing investment.",
+    "p_2": "I provides many types of exterior painting services. I take into consideration the longevity you desire, the protection needed, and aesthetic values.",
+    "p_3": "Since exterior walls and surfaces are exposed to the elements, I choose a primer that services as a binding layer and we closely match it to the finishing paint. Porous exposed surfaces like concrete or wood are better prepared, allowing the paint to more firmly adhere to them.",
+    "p_4": "For wood surfaces prone to mold and mildew, I thoroughly prepare the area and use mildew resistant paints so the walls stay clean-looking and protected for many years.",
+    "p_5": "Whatever your exterior home painting needs may be, I am ready to help you."
+  },
+
+  "mission": {
+    "title": "My Mission",
+    "t_1": "Quality of Standard guarantee.",
+    "p_1": "Preparation, experience, and execution are the keys to a successful paint job. I use top quality products so that my work can stand the test of time.",
+    "t_2": "Provide a high-quality painting service.",
+    "p_2": "I  have made the process of getting your house painted a whole lot less annoying. I will deliver both speed and quality, so you don’t have to shift your whole life around just to get your house painted."
+  },
+
+  "book_now": {
+    "title": "Ready for more 'you' time?",
+    "button": "Contact me Now.",
+    "p_1": "To make the process simpler, I've prepared a few questions to answer. All fields are optional and you can choose to fill out as much you like.",
+    "success": {
+      "title": "Success!",
+      "p": "Thank you for contacting me. I aim to respond to all inquiries within 24 hrs."
+    },
+    "form": {
+      "common": {
+        "tell_more": "Tell me more."
+      },
+      "button": {
+        "reset": "Cancel",
+        "submit": "Let's do This!",
+        "processing": "Processing.."
+      },
+      "how_big": {
+        "title": "Approximate surface area in square meters?",
+        "point_1": "Less than 100 meters²",
+        "point_2": "100 - 500 meters²",
+        "point_3": "500 - 1000 meters²",
+        "point_4": "More than 1,000 meters²"
+      },
+      "when": {
+        "title": "When do you need painting?",
+        "point_1": "In the next few days",
+        "point_2": "As soon as possible",
+        "point_3": "On one particular date",
+        "day": "Select a day"
+      },
+      "anything_else": {
+        "title": "Anything else I should know?",
+        "point_1": "No",
+        "point_2": "Yes"
+      },
+      "how_contact": {
+        "title": "How should I contact you?",
+        "point_1": "By email only",
+        "point_2": "By text message",
+        "name": "Your name",
+        "email": "Email address",
+        "phone": "Phone number"
+      }
+    }
+  },
+
+  "footer": {
+    "moto": "I paint, you relax. It’s that simple.",
+    "copyleft": {
+      "mark": "©",
+      "rights": "All rights preserved"
+    },
+    "terms": "Terms of Service & Privacy Policy"
+  }
+}

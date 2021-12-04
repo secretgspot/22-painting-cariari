@@ -1,0 +1,140 @@
+{
+  "languages": {
+    "en": "English",
+    "es": "Espanol"
+  },
+
+  "pages": {
+    "main": "Pintura Cariari",
+    "terms": "Pintura Cariari: Términos de política y privacidad del servicio"
+  },
+
+  "hero": {
+    "title": "Pintura Cariari",
+    "hero": {
+      "title_1": "Yo pinto",
+      "title_2": "Relájate."
+    }
+  },
+
+  "intro": {
+    "p_1": "Pintar no es divertido, al menos para la mayoría. De hecho, lleva mucho tiempo, es complicado y puede involucrar una o dos rodillas magulladas. En mi caso me encanta pintar. Es prácticamente todo lo que hago. Recupere su tiempo - resérveme para hacer su inversión como nueva.",
+    "p_2": "En el raro caso de que no esté satisfecho con la calidad del servicio, lo corregiré con mi Garantía de calidad estándar."
+  },
+
+  "calc": {
+    "title": "Estimación en línea",
+    "gallons": "galones",
+    "liters": "litros",
+    "colones": "₡",
+    "dollars": "$",
+    "sq_feet": "pies",
+    "sq_meters": "metros",
+    "surface_area": "Área de superficie",
+    "surface_type": {
+      "title": "Tipo de superficie",
+      "smooth": "suave",
+      "textured": "texturizado",
+      "pourous": "poroso"
+    },
+    "paint_quality": {
+      "title": "Calidad de pintura",
+      "luxury": "lujo",
+      "premium": "prima",
+      "economy": "economía"
+    },
+    "coats": "Capas"
+  },
+
+  "steps": {
+    "title": "Mi sencillo proceso garantiza la calidad en todo momento.",
+    "estimate": {
+      "title": "Estimación gratuíta",
+      "p": "Realizar la estimación del trabajo requerido"
+    },
+    "preparation": {
+      "title": "Elaboración",
+      "p": "Preparamos y enmascaramos todas las áreas para eliminar el daño a la propiedad."
+    },
+    "job": {
+      "title": "Hacer el trabajo",
+      "p": "Después de que todo esté preparado, imprima y pinte las superficies."
+    },
+    "cleanup": {
+      "title": "Limpieza",
+      "p": "Limpie todo y presente los resultados completos al cliente para su aprobación y aprobación."
+    }
+  },
+
+  "details": {
+    "p_1": "Un exterior bien pintado es el saludo de su familia a la comunidad. Es un reflejo de su estilo y sus intereses. Una casa recién pintada es hermosa puede inculcar un sentido de pertenencia y orgullo para quienes la habitan. Pero no es sólo un efecto psicológico, es una protección contra inclemencias del medio ambiente hacia su valiosa inversión.",
+    "p_2": "Yo ofrecemos varios tipos de servicios de pintura exterior. Tenemos en cuenta la durabilidad esperada por usted, la protección necesaria, y los valores estéticos.",
+    "p_3": "Dado que las paredes exteriores y las superficies están expuestas a los elementos, elegimos una cobertura básica que sirve como una capa de unión y que se parecen mucho a la pintura de acabado. Las superficies expuestas porosas como el hormigón o la madera están mejor preparadas, permitiendo que la pintura se adhiera más firmemente a ellas.",
+    "p_4": "Para superficies de madera propensas a humedad y moho, preparamos a fondo el área y usamos pinturas resistentes al moho para que las paredes permanezcan limpias y protegidas durante muchos años.",
+    "p_5": "Cualesquiera que sean sus necesidades de pintura exterior para el hogar, estoy listo para ayudarlo."
+  },
+
+  "mission": {
+    "title": "Mi misión",
+    "t_1": "Calidad de garantía estándar.",
+    "p_1": "La preparación, la experiencia y la ejecución son las claves para un trabajo de pintura exitoso. Utilizo productos de primera calidad para que mi trabajo pueda resistir el paso del tiempo.",
+    "t_2": "Proporcionar un servicio de pintura de alta calidad.",
+    "p_2": "He hecho que el proceso de pintar tu casa sea mucho menos molesto. Brindaré velocidad y calidad, para que no tenga que cambiar toda su vida solo para pintar su casa."
+  },
+
+  "book_now": {
+    "title": "¿Listo para relajarse?",
+    "button": "Contáctame ahora.",
+    "p_1": "Para simplificar el proceso, hemos preparado algunas preguntas para responder. Todos los campos son opcionales y puedes elegir completar tantos como quieras.",
+    "success": {
+      "title": "¡Éxito!",
+      "p": "Gracias por contactarme. Mi objetivo es responder a todas las consultas dentro de las 24 horas."
+    },
+    "form": {
+      "common": {
+        "tell_more": "Cuentanos más."
+      },
+      "button": {
+        "reset": "Anular",
+        "submit": "Enviar",
+        "processing": "Procesando.."
+      },
+      "how_big": {
+        "title": "¿Superficie aproximada en metros cuadrados?",
+        "point_1": "Menos de 100 metros²",
+        "point_2": "100 - 500 metros²",
+        "point_3": "500 - 1000 metros²",
+        "point_4": "Más de 1000 metros²"
+      },
+      "when": {
+        "title": "¿Cuándo pintura necesita?",
+        "point_1": "En los proximos días",
+        "point_2": "Tan pronto como sea posible",
+        "point_3": "En una fecha determinada",
+        "day": "Seleccione un día"
+      },
+      "anything_else": {
+        "title": "¿Algo más que el pintor debería saber?",
+        "point_1": "No",
+        "point_2": "Sí"
+      },
+      "how_contact": {
+        "title": "¿Cómo debo contactarlo?",
+        "point_1": "Solo por correo electrónico",
+        "point_2": "Por mensaje de texto",
+        "name": "Tu nombre",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono"
+      }
+    }
+  },
+
+  "footer": {
+    "moto": "Yo pintamos, tú te relajas. Es así de simple.",
+    "copyleft": {
+      "mark": "©",
+      "rights": "Todos los derechos reservados"
+    },
+    "terms": "Términos de servicio & Política de privacidad"
+  }
+}
