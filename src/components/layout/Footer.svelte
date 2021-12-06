@@ -39,7 +39,7 @@
 
   &:before {
     content: "";
-    background-image: url(./assets/painter_footer_sd.svg);
+    background-image: url('/assets/painter_footer_sd.svg');
     height: 222px;
     width: 100%;
     background-repeat: no-repeat;

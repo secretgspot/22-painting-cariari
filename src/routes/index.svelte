@@ -18,7 +18,7 @@
 
   const handleChange = ({ detail }) => {
     isInView = detail.inView;
-    console.log('intro:', detail);
+    // console.log('intro:', detail);
   };
 
   function generateRandomNumber(min, max) {
