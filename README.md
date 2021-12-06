@@ -34,6 +34,8 @@ lztt  JNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'  lvzt
                    J@MMM0+.
 ```
 
+[Cariari Painting]<https://painting-cariari.vercel.app/>
+
 ## Inspiration and Snippets
 
 [Responsive Props]<https://svelte.dev/repl/dc1e33271aeb4e3c93ffb91948dd7960?version=3.44.0>
@@ -56,18 +58,12 @@ lztt  JNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'  lvzt
 
 ## Tasks
 
-[x] meta description for the site
-[ ] on:click for Top/Bottom Logo?
 [ ] lang settings in localStorange?
 [ ] Find better way to control intersection observer <https://www.kalso.com/>
 [ ] think about intro animation and maybe house should slide in from left and slide out to right, work with colors too
 [ ] Maybe not have wave animation on BookNow form?
 [ ] meta lock for zoom of some elements
-
-### Vercel specific issues
-
-[ ] painter_footer_sd.svg failed to load, why?
-[ ] missing scrollbars, why?
+[ ] Look into $locales en vs en-US
 
 ## Lessons
 

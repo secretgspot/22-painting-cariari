@@ -20,6 +20,7 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-end;
+		flex: 1;
 
 		span {
 			display: inline-block;
@@ -31,7 +32,6 @@
 			color: var(--link);
 
 			&:hover {	color: var(--link_hover); }
-
 			&.selected { border: 1px solid var(--color-red); }
 		}
 	}

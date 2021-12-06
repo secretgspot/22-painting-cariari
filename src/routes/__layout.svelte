@@ -1,10 +1,12 @@
 <script>
-  import { addMessages, init, getLocaleFromNavigator /*, register */ } from 'svelte-intl-precompile';
+  import { register, addMessages, init, getLocaleFromNavigator /*, register */ } from 'svelte-intl-precompile';
   import en from '$locales/en.json';
   import es from '$locales/es.json';
   // @ts-ignore
   addMessages('en', en);
   addMessages('es', es);
+  // register('es-CR', () => import('$locales/es.json'));
+  // register('en-US', () => import('$locales/en.json'));
   // register('es', () => import('$locales/en.js')); <-- use this approach if you want locales to be load lazily
   init({
     fallbackLocale: 'en',

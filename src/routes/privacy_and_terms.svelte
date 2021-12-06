@@ -11,7 +11,7 @@
   <title>{$t('pages.terms')}</title>
 </svelte:head>
 
-<article class="privacy privacy-policy content-wrapper">
+<article id="privacy">
   <Header/>
 
   <section id="section--privacy-policy">
@@ -188,6 +188,11 @@
 </article>
 
 <style lang="scss">
+#privacy {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: 1fr 3fr 1fr;
+}
 #section--privacy-policy {
   display: grid;
 
