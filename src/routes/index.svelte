@@ -150,7 +150,7 @@
 
   h2.large {
    margin: 0;
-   font-size: clamp(2rem, 10vw, 5rem);
+   font-size: clamp(2rem, 13vw, 5rem);
    cursor: default;
 
     &:first-of-type {

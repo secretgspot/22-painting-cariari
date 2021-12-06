@@ -34,6 +34,8 @@ lztt  JNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'  lvzt
                    J@MMM0+.
 ```
 
+## Inspiration and Snippets
+
 [Responsive Props]<https://svelte.dev/repl/dc1e33271aeb4e3c93ffb91948dd7960?version=3.44.0>
 [Confeti onClic]<https://svelte.dev/repl/f5ac6c420a7e4143886b20d0d7ecb768?version=3.44.0>
 [Text input]<https://svelte.dev/repl/2638aabb4b1e468cb2d6f92801b8684d?version=3.44.0>
@@ -56,10 +58,11 @@ lztt  JNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'  lvzt
 
 [ ] on:click for Top/Bottom Logo?
 [ ] lang settings in localStorange?
-
 [ ] Find better way to control intersection observer <https://www.kalso.com/>
 [ ] think about intro animation and maybe house should slide in from left and slide out to right, work with colors too
 [ ] Maybe not have wave animation on BookNow form?
+[ ] meta description for the site
+[ ] meta lock for zoom of some elements
 
 ## Lessons
 

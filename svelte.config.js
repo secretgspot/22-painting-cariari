@@ -1,5 +1,6 @@
 /** @type {import('@sveltejs/kit').Config} */
 import path from 'path';
+import vercel from '@sveltejs/adapter-vercel';
 import precompileIntl from "svelte-intl-precompile/sveltekit-plugin.js";
 import sveltePreprocess from 'svelte-preprocess';
 
@@ -8,6 +9,7 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
+		adapter: vercel(),
 		vite: {
 			resolve: {
 					alias: {

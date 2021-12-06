@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { t, locale, locales } from 'svelte-intl-precompile';
   import { siteSettings } from '$lib/store.js';
 	import LangSwitcher from '$components/layout/LangSwitch.svelte';
@@ -9,7 +10,7 @@
 
 <header id="siteheader" class="header">
 	<div class="logo-wrapper">
-		<SvgLogo size="45" />
+		<SvgLogo size="45" on:click="{() => goto('/')}" />
 		{#if meta}
 		<div class="extra-meta">
 			<span class="pink phone">{$siteSettings.phone}</span>

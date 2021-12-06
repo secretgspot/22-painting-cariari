@@ -1,5 +1,5 @@
 <script>
-  import { goto, invalidate, prefetch, prefetchRoutes } from '$app/navigation';
+  import { goto } from '$app/navigation';
 	import { getStores, navigating, page, session } from '$app/stores';
 	import { t, locale, locales } from 'svelte-intl-precompile';
   import { siteSettings } from '$lib/store.js';
@@ -17,10 +17,10 @@
 	<div class="right">
     <div class="copyright">
 			<span>{$t("footer.copyleft.mark")} {$siteSettings.company}</span>
-			<a class:selected="{$page.path === '/privacy_and_terms'}" href="privacy_and_terms">{$t("footer.terms")}</a>
+			<a sveltekit:prefetch href="privacy_and_terms">{$t("footer.terms")}</a>
 		</div>
 
-    <SvgLogo size="45" footer />
+    <SvgLogo size="45" footer on:click="{() => goto('/')}" />
 	</div><!-- END OF BOTTOM-RIGHT -->
 </footer>
 
