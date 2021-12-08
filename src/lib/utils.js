@@ -9,7 +9,13 @@ export function onInterval(callback, milliseconds) {
 }
 
 
-/** Selects the text inside a text node when the node is focused */
+/* INPUT HOOK
+  selectTextOnFocus()
+  - selects all text on focus
+
+  blurOnEscape()
+  - clears selection of focused element
+*/
 export function selectTextOnFocus(node) {
   const handleFocus = event => {
     node && typeof node.select === 'function' && node.select()
@@ -23,8 +29,6 @@ export function selectTextOnFocus(node) {
     }
   }
 }
-
-/** Blurs the node when Escape is pressed */
 export function blurOnEscape(node) {
   const handleKey = event => {
     if (event.key === 'Escape' && node && typeof node.blur === 'function') node.blur()
@@ -37,4 +41,35 @@ export function blurOnEscape(node) {
       node.removeEventListener('keydown', handleKey)
     }
   }
+}
+
+/* CSS HOOK
+  usage:
+  let fontSize = 2;
+	let color = '#000';
+
+  <main use:css="{{ color }}">
+    <h1 use:css={{ fontSize }}>
+      Hello Werld!
+    </h1>
+    <input type="color" bind:value="{color}" />
+  </main>
+*/
+export function css(node, properties) {
+	console.log(node, properties);
+
+	function setProperties() {
+		for (const prop of Object.keys(properties)) {
+			node.style.setProperty(`--${prop}`, properties[prop]);
+		}
+	}
+
+	setProperties();
+
+	return {
+		update(newProperties) {
+			properties = newProperties;
+			setProperties();
+		}
+	};
 }

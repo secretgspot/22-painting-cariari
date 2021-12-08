@@ -9,6 +9,7 @@
 			class="a"
 			class:selected={$locale.includes(item)}
 			href={`#!${item}`}
+			alt="{item}"
 			on:click={() => ($locale = item)}>
 			<SvgIcon type="flag_{item}" size="27" />
 		</span>

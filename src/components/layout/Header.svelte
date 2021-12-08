@@ -1,6 +1,5 @@
 <script>
 	import { goto } from '$app/navigation';
-	import { t, locale, locales } from 'svelte-intl-precompile';
   import { siteSettings } from '$lib/store.js';
 	import LangSwitcher from '$components/layout/LangSwitch.svelte';
   import SvgLogo from '$basic/SvgLogo.svelte';

@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store';
+import { readable, writable } from 'svelte/store';
 
 let settings = {
 	author: import.meta.env.VITE_AUTHOR,
@@ -13,3 +13,17 @@ let settings = {
 }
 
 export const siteSettings = readable(settings);
+
+export const persistStore = (key, initial) => {
+	const persist = localStorage.getItem(key);
+	const data = persist ? JSON.parse(persist) : initial;
+
+	const store = writable(data, () => {
+		const unsubscribe = store.subscribe(value => {
+			localStorage.setItem(key, JSON.stringify(value))
+		});
+		return unsubscribe;
+	});
+};
+
+export const siteStore = persistStore('test', 'testtting');

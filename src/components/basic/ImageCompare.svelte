@@ -1,168 +1,94 @@
 <script>
-	let hideOnSlide = true,
-		imgOffset = null,
-		sliding = false,
-		contain = false,
-		overlay = true,
-		offset = 0.5,
-		before = '',
-		after = '',
-		img;
-
-	function resize(e) {
-		imgOffset = (e.type === 'load' ? e.target : img).getBoundingClientRect();
-	}
-
-	function move(e) {
-		if (sliding && imgOffset) {
-			let x = (e.touches ? e.touches[0].pageX : e.pageX) - imgOffset.left;
-			x = x < 0 ? 0 : ((x > w) ? w : x);
-			offset = x / w;
-		}
-	}
-
-	function start(e) {
-		sliding = true;
-		move(e);
-	}
-
-	function end() {
-		sliding = false;
-	}
-
-	$: w = imgOffset && imgOffset.width;
-	$: h = imgOffset && imgOffset.height;
-	$: x = w * offset;
-	$: opacity = hideOnSlide && sliding ? 0 : 1;
-	$: style = contain ? `width:100%;height:100%;` : `width:${w}px;height:${h}px;`;
-
-	export { before, after, offset, overlay, contain, hideOnSlide };
+	/* usage
+	<ImgCompare before="https://assets.stoumann.dk/img/color.jpg" after="https://assets.stoumann.dk/img/bw.jpg" />
+	*/
+	export let before = '';
+	export let after = '';
+	$: val = 50;
 </script>
 
-<svelte:window
-	on:touchmove={move}
-	on:touchend={end}
-	on:mousemove={move}
-	on:mouseup={end}
-	on:resize={resize}
-/>
-
-<section id="section--beforeafter" class="content-wrapper">
-	<div class="container" {style} on:touchstart={start} on:mousedown={start}>
-		<img
-			bind:this={img}
-			src={after}
-			alt="after"
-			on:mousedown|preventDefault
-			on:load={resize}
-			{style}
-		>
-		<img
-			src={before}
-			alt="before"
-			on:mousedown|preventDefault
-			style="{style}clip:rect(0, {x}px, {h}px, 0);"
-		>
-		{#if overlay}
-		<div class="overlay" style="opacity:{opacity}"></div>
-		{/if}
-		<div class="before-label" style="opacity:{opacity}">
-			<slot name="before"></slot>
-		</div>
-		<div class="after-label" style="opacity:{opacity}">
-			<slot name="after"></slot>
-		</div>
-		<div class="handle" style="left: calc({offset * 100}% - 20px)">
-			<div class="arrow-left"></div>
-			<div class="arrow-right"></div>
-		</div>
-	</div>
-</section>
+<div class="c-compare" style="--value:{val}%;">
+  <img class="c-compare__left" src="{before}" alt="before" />
+  <img class="c-compare__right" src="{after}" alt="after" />
+  <input type="range" class="c-rng c-compare__range" min="0" max="100" bind:value="{val}" />
+</div>
 
 <style>
-	#section--beforeafter {
-		height: 270px;
-	}
-	.container {
-		overflow: hidden;
-		position: relative;
-		box-sizing: content-box;
-	}
-	.container img {
-		top: 0;
-		left: 0;
-		z-index: 20;
-		display: block;
-		max-width: 100%;
-		user-select: none;
-		object-fit: cover;
-		position: absolute;
-	}
-	.overlay {
-		top: 0;
-		opacity: 0;
-		z-index: 25;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		transition: opacity .5s;
-		background: var(--color-black);
-		filter: opacity(0.5);
-	}
-	.before-label, .after-label {
-		top: 0;
-		bottom: 0;
-		z-index: 25;
-		user-select: none;
-		position: absolute;
-		display: flex;
-		align-items: center;
-		color: var(--color-white);
-		filter: opacity(0.5);
-	}
-	.before-label { left: 1rem; }
-	.after-label { right: 1rem; }
-	.container:hover > .overlay { opacity: 1; }
-	.handle {
-		z-index: 30;
-		width: 40px;
-		height: 40px;
-		cursor: move;
-		background: none;
-		margin-top: -4px;
-		margin-left: -4px;
-		user-select: none;
-		position: absolute;
-		border-radius: 50px;
-		top: calc(50% - 20px);
-		border: 4px solid var(--color-white);
-		filter: opacity(0.63);
-	}
-	.handle:before, .handle:after {
-		content: "";
-		height: 9999px;
-		position: absolute;
-		left: calc(50% - 2px);
-		border: 2px solid var(--color-white);
-	}
-	.handle:before { top: 40px; }
-	.handle:after { bottom: 40px; }
-	.arrow-right, .arrow-left {
-		width: 0;
-		height: 0;
-		user-select: none;
-		position: relative;
-		border-top: 10px solid transparent;
-		border-bottom: 10px solid transparent;
-	}
-	.arrow-right {
-		left: 23px;
-		bottom: 10px;
-		border-left: 10px solid var(--color-white);
-	}
-	.arrow-left {
-		left: 7px;
-		top: 10px;
-		border-right: 10px solid var(--color-white);
-	}
+.c-compare {
+  --h: 9;
+  --m: 1rem 0;
+  --w: 16;
+  --thumb-bgc: red;
+  --thumb-bgc-focus: hsla(0, 70%, 70%, 0.7);
+  --thumb-w: 1rem;
+
+  margin: var(--m);
+  position: relative;
+}
+.c-compare::after {
+  content: "";
+  display: block;
+  padding-bottom: calc((var(--h) / var(--w)) * 100%);
+}
+.c-compare__left,
+.c-compare__right {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+.c-compare__left {
+  clip-path: polygon(0% 0%, var(--value) 0%, var(--value) 100%, 0% 100%);
+}
+.c-compare__right {
+  clip-path: polygon(100% 0%, var(--value) 0%, var(--value) 100%, 100% 100%);
+}
+.c-compare__range {
+  background-color: transparent;
+  box-sizing: border-box;
+  font-family: inherit;
+  height: 100%;
+  margin: 0;
+  outline: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.c-compare__range::-moz-range-thumb {
+  background-color: var(--thumb-bgc);
+  cursor: ew-resize;
+  height: 100%;
+  width: var(--thumb-w);
+}
+.c-compare__range::-webkit-slider-thumb {
+  background-color: var(--thumb-bgc);
+  cursor: ew-resize;
+  height: 100%;
+  width: var(--thumb-w);
+}
+.c-compare__range:focus::-webkit-slider-thumb {
+  background-color: var(--thumb-bgc-focus);
+  box-shadow: 0 0 0 3px var(--thumb-bgc);
+}
+.c-compare__range:focus::-moz-range-thumb {
+  background-color: var(--thumb-bgc-focus);
+  box-shadow: 0 0 0 3px var(--thumb-bgc);
+}
+.c-compare__range::-moz-range-track {
+  background: transparent;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+.c-compare__range::-webkit-slider-runnable-track {
+  background: transparent;
+  background-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+.c-compare__range,
+.c-compare__range::-webkit-slider-runnable-track,
+.c-compare__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
 </style>
