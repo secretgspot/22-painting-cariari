@@ -44,6 +44,9 @@
 
 
     <img class="painter" src="./assets/painter_front.svg" alt="Painter with hands crossed while holding a roller brush" />
+    <!-- <svg class="painter" xml:space="preserve" id="paintor" x="0" y="0" version="1.1" viewBox="0 0 152.2 382.9">
+      <use xlink:href='./assets/painter_front.svg#painter'></use>
+    </svg> -->
     {#key houseUrl}
     <img out:scale  class="house" src="{houseUrl}" alt="Outline of a house for background" />
     {/key}

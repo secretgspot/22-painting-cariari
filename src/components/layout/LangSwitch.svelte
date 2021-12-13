@@ -1,7 +1,10 @@
 <script>
-	import { t, locale, locales } from 'svelte-intl-precompile';
+	import { localSettings } from '$lib/store';
+	import { locale, locales } from 'svelte-intl-precompile';
 	import SvgIcon from '$basic/SvgIcon.svelte';
 </script>
+
+<!-- {JSON.stringify($localSettings, null, 2)} {$locale} -->
 
 <div class="language">
 	{#each $locales as item}
@@ -10,7 +13,7 @@
 			class:selected={$locale.includes(item)}
 			href={`#!${item}`}
 			alt="{item}"
-			on:click={() => ($locale = item)}>
+			on:click={() => {$locale = item; $localSettings.lang = item}}>
 			<SvgIcon type="flag_{item}" size="27" />
 		</span>
 	{/each}

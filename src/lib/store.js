@@ -1,4 +1,6 @@
-import { readable, writable } from 'svelte/store';
+import { readable, writable as internal, get } from 'svelte/store';
+import { browser } from '$app/env' // sveltekit environment
+import { locale, getLocaleFromNavigator } from 'svelte-intl-precompile';
 
 let settings = {
 	author: import.meta.env.VITE_AUTHOR,
@@ -14,16 +16,54 @@ let settings = {
 
 export const siteSettings = readable(settings);
 
-export const persistStore = (key, initial) => {
-	const persist = localStorage.getItem(key);
-	const data = persist ? JSON.parse(persist) : initial;
 
-	const store = writable(data, () => {
-		const unsubscribe = store.subscribe(value => {
-			localStorage.setItem(key, JSON.stringify(value))
-		});
-		return unsubscribe;
-	});
-};
+/*
+	https://github.com/emagining/sveltekit-localstorage-store
 
-export const siteStore = persistStore('test', 'testtting');
+	Usage:
+
+	import { writable } from './localStore'
+
+	export const user = writable('user', {
+		name: 'there',
+		id: 1
+	})
+*/
+export function writable(key, initialValue) {
+
+  const store = internal(initialValue)
+  const {subscribe, set} = store
+  // check if in client
+  if(browser){
+    const json = localStorage.getItem(key)
+    if (json) { set(JSON.parse(json)) }
+  }
+
+  return {
+    set(value) {
+    // check if in client
+      if(browser){
+        localStorage.setItem(key, JSON.stringify(value))
+      }
+      set(value)
+    },
+    update(cb) {
+      const value = cb(get(store))
+      this.set(value)
+    },
+    subscribe
+  }
+}
+
+export const localSettings = writable('settings', { lang: locale });
+
+// function persistStore() {
+// 	const { subscribe, set, update } = writable();
+// 	let lang = localStorage.getItem('pc')
+
+// 	return {
+// 		lang: lang ? JSON.parse(lang) : localStorage.setItem('pc', JSON.stringify(getLocaleFromNavigator())),
+// 		set: value => {localStorage.setItem('pc', JSON.stringify(value)); locale = value;}
+// 	};
+// }
+// export let store = writable(persistStore());

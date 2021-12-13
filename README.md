@@ -47,13 +47,18 @@ lztt  JNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'  lvzt
 
 ## Tasks
 
-- [ ] lang settings in localStorage?
+- [x] lang settings in localStorage?
 - [ ] Would parallax be too heavy? [kalso](https://www.kalso.com)
 - [ ] Rethink into anim?
 - [ ] Rethink Booking section anim?
 - [ ] meta lock for zoom of some elements
 - [ ] Look into $locales en vs en-US
 - [ ] Add imageCompare & Details section on >= Laptop screen
+- [ ] Top Painter Shadow should be variable
+
+## Issues
+
+- localStorage via store bit hacky, revisit _layout.svelte + store.js + LangSwitcher.svelte
 
 ## Lessons
 
