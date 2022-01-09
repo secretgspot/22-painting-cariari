@@ -12,7 +12,7 @@
 </svelte:head>
 
 <article id="privacy">
-  <Header/>
+  <Header meta="{false}"/>
 
   <section id="section--privacy-policy">
     <div class="main-content">

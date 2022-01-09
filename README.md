@@ -34,7 +34,8 @@ lztt  JNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'  lvzt
                    J@MMM0+.
 ```
 
-[Cariari Painting](https://painting-cariari.vercel.app)
+[Cariari Painting](https://pintarcariari.casa)
+[Cariari Painting Vercel](https://painting-cariari.vercel.app)
 
 ## Inspiration and Snippets
 

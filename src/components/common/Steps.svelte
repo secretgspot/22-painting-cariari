@@ -64,8 +64,9 @@
   margin: 3rem 0;
 
   @media screen and (min-width: 768px) {
-    --card-width: 300px;
+    --card-width: 320px;
     grid-column: 2/-2;
+    --grid-gap: 1vw;
   }
 
   // @media screen and (min-width: 980px) {
@@ -109,6 +110,12 @@
         // transition: all 2s ease-in-out;
         animation: jello-horizontal 0.6s both;
         // animation: puff-in-center 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+      }
+      @media screen and (min-width: 1600px) {
+        &:last-of-type {
+          grid-column: 1 / -1;
+          justify-self: center;
+        }
       }
     }
   }
